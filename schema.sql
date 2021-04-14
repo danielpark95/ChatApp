@@ -1,0 +1,17 @@
+DROP TABLE IF EXISTS messages;
+
+CREATE TABLE messages(
+	message_id INTEGER PRIMARY KEY AUTOINCREMENT,
+	message_from INTEGER NOT NULL,
+	message_to INTEGER NOT NULL,
+	created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	content TEXT NOT NULL
+);
+
+DROP TABLE IF EXISTS users;
+CREATE TABLE users(
+	user_id TEXT PRIMARY KEY,
+	password TEXT NOT NULL,
+	first_name TEXT,
+	last_name TEXT
+);

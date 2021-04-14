@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Welcome to Chat App{% endblock %}</h1>
+    {% for user in users %}
+        <a href="#">
+            <h2>{{ user['first_name'] }} {{ user['last_name'] }}</h2>
+        </a>
+        <span class="badge badge-primary">{{ user['password'] }}</span>
+        <span class="badge badge-primary">{{ user['user_id'] }}</span>
+        <hr>
+    {% endfor %}
+{% endblock %}
