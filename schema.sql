@@ -10,7 +10,8 @@ CREATE TABLE messages(
 
 DROP TABLE IF EXISTS users;
 CREATE TABLE users(
-	user_id TEXT PRIMARY KEY,
+	user_id INTEGER PRIMARY KEY AUTOINCREMENT,
+	username TEXT NOT NULL,
 	password TEXT NOT NULL,
 	first_name TEXT,
 	last_name TEXT
